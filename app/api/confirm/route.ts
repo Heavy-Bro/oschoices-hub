@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
   if (!subscriber.confirmed) {
     const { error: updateError } = await supabaseAdmin
       .from("subscribers")
-      .update({ confirmed: true, confirm_token: null })
+      .update({ confirmed: true })
       .eq("id", subscriber.id);
 
     if (updateError) {

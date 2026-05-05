@@ -80,6 +80,20 @@ Vercel auto-deploys from `main`. Production URL: `https://oschoices.com`.
 
 ---
 
+## Sending Newsletters
+
+1. Publish a blog post to `content/blog/your-post.mdx` and push to GitHub
+2. Run the Supabase migration `20260505000001_create_newsletter_sends.sql` if not done yet
+3. Add `ADMIN_SECRET` to Vercel env vars (Settings → Environment Variables)
+4. Visit `https://oschoices.com/admin` → enter your `ADMIN_SECRET` value
+5. Select the post from the dropdown, optionally override subject and preview text
+6. Click **Send Newsletter** — shows sent/failed counts inline
+7. Check Supabase `newsletter_sends` table for the audit log row
+
+> **Rate limit:** Resend free tier allows 100 emails/day, 3,000/month. Emails are sent in batches of 100.
+
+---
+
 ## Environment Variables
 
 | Variable | Where to get it |
@@ -91,6 +105,7 @@ Vercel auto-deploys from `main`. Production URL: `https://oschoices.com`.
 | `RESEND_FROM_EMAIL` | `onboarding@resend.dev` locally; `hello@oschoices.com` in prod |
 | `NEXT_PUBLIC_GA_ID` | GA4 → Admin → Data Streams → Measurement ID |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` locally; `https://oschoices.com` in prod |
+| `ADMIN_SECRET` | Any strong random string — used to protect `/admin` |
 
 ---
 
