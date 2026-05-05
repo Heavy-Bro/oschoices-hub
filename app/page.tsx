@@ -17,44 +17,48 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="mx-auto max-w-[1200px] px-4 sm:px-6 py-20 sm:py-28 text-center">
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight">
-            Smart tools for{" "}
-            <span className="text-primary">smarter choices.</span>
-          </h1>
-          <p className="mt-5 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Free, focused indie tools for everyday decisions. No accounts. No
-            subscriptions. Just the tool you need.
+        <section className="max-w-5xl mx-auto px-6 py-24 lg:py-32 text-center">
+          <p className="uppercase tracking-wide text-sm text-blue-600 font-semibold">
+            OSChoices Portfolio
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Button asChild size="lg">
-              <Link href="/apps">Explore Tools</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/blog">Read the Blog</Link>
-            </Button>
+          <h1 className="font-heading text-5xl lg:text-7xl font-bold text-slate-900 mt-4 leading-tight">
+            Smart tools for smarter choices.
+          </h1>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+            A growing portfolio of free, focused indie tools — built to make
+            everyday decisions a little easier.
+          </p>
+          <div className="mt-10 flex gap-4 justify-center items-center flex-wrap">
+            <Link
+              href="/apps"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Explore Tools
+            </Link>
+            <Link
+              href="/blog"
+              className="text-slate-700 hover:text-slate-900 underline underline-offset-4 transition-colors"
+            >
+              Read the blog →
+            </Link>
           </div>
         </section>
 
-        {/* What is OSChoices */}
-        <section className="bg-secondary border-y border-border">
-          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-16 sm:py-20">
-            <div className="max-w-2xl mx-auto text-center">
-              <h2 className="font-heading text-3xl font-bold text-foreground">
-                What is OSChoices?
-              </h2>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                OSChoices is a growing collection of small, well-made web apps.
-                Each one solves a single problem cleanly. We build in public,
-                keep things free, and never add complexity that doesn&apos;t
-                earn its place.
-              </p>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
-                OS stands for <strong>Open</strong> and <strong>Simple</strong>{" "}
-                — the two things every tool here must be.
-              </p>
-            </div>
-          </div>
+        {/* What is OSChoices? */}
+        <section className="max-w-3xl mx-auto px-6 py-16 text-center">
+          <h2 className="font-heading text-3xl font-bold text-slate-900">
+            What is OSChoices?
+          </h2>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            OSChoices is a hub-and-spoke portfolio of small, well-made indie
+            tools. Each one solves a single problem cleanly — no accounts, no
+            paywalls, no bloat. Built in public, kept free.
+          </p>
+          <p className="mt-3 text-slate-600 leading-relaxed">
+            New tools launch regularly across utility, finance, productivity,
+            and creator categories. Subscribe below and you&apos;ll be the
+            first to know.
+          </p>
         </section>
 
         {/* Featured Apps */}
