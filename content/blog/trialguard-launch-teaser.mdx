@@ -1,0 +1,78 @@
+---
+title: "$204 a Year — The Quiet Cost of Forgetting to Cancel"
+date: "2026-05-05"
+description: "48% of people have forgotten to cancel a free trial. The fix isn't another bank-linked finance app — it's something simpler. Coming soon to OSChoices."
+author: "Muhammad Farrukh"
+tags: ["launch", "trialguard", "subscriptions", "indie"]
+ogImage: "/blog/trialguard-launch.png"
+---
+
+A few months ago I noticed a $19 charge on my card from a Figma plugin I had tried for a weekend.
+
+I don't remember the plugin's name. I don't remember signing up. I sure as hell don't remember choosing to pay for it. But there it was, three months in a row, quietly draining out of the same account I use for groceries.
+
+I am, statistically, very normal.
+
+A 2025 CableTV survey of 1,000 Americans found that about half (48.0%) have forgotten to cancel a free trial and accidentally paid more than they expected. And of those people, another 48.1% have had it happen multiple times. CNET pegs the average cost at around $204 per year — roughly $17 a month in charges for services that go unused. C+R Research goes further: Americans spend $219/month on subscriptions but estimate $86, a 2.5x perception gap, and 89% of consumers underestimate their subscription spending.
+
+Two hundred and four dollars a year. Per person. Multiplied across roughly every adult with a credit card and a Wi-Fi connection. The subscription economy was valued at approximately $536 billion in 2025 and is projected to reach $859 billion in 2026, and a meaningful slice of that growth is just people forgetting to push a button.
+
+## Why every existing fix annoys me
+
+There are tools for this. Rocket Money, Bobby, the dozen "subscription dashboard" apps in the App Store. Most of them work the same way: hand over your bank login, let an algorithm sniff through your transactions, and trust the company to do something useful with the access.
+
+I tried one. It worked. I also hated it.
+
+Two reasons:
+
+**First, the privacy tradeoff feels asymmetric.** I'm sharing every coffee, every grocery run, every weird Amazon impulse buy with a third party — to solve a problem that's really about *future* charges, not past ones. The data they need to help me is a thousand times smaller than the data I have to give them.
+
+**Second, they all focus on the wrong moment.** Existing subscription trackers are great at telling you about charges that have *already happened*. But the moment that actually matters is the one *before* a free trial converts. That's where the money disappears. That's where a single notification, two days before the charge, would have saved me.
+
+The whole category is built backwards.
+
+## The version I wanted
+
+Something so small it almost doesn't qualify as an app:
+
+1. You start a free trial somewhere.
+2. You take ten seconds to add it — name of the service, the date the trial ends, what they'll charge if you forget.
+3. Two days before the charge, an email arrives. "Your Figma Plugin trial ends in 48 hours. Cancel here."
+4. That's it.
+
+No bank login. No transaction scraping. No machine learning model trying to guess what you bought. No premium tier locked behind a five-step funnel. Just one thing, done well.
+
+This is the gap I keep coming back to. The existing tools are powerful but invasive. The privacy-first ones (like Bobby and ReSubs) are excellent for tracking what you *already* pay for, but they're not built around the trial-cancellation moment specifically. 74% of consumers say it is easy to forget about recurring charges. 72% have all subscriptions set to auto-pay. And 42% admit they have forgotten about a subscription entirely while still being charged for it. The structural fix isn't a bigger dashboard. It's a single, well-timed reminder.
+
+## What I'm building
+
+It's called **TrialGuard**. The whole pitch fits in one sentence: *Never get charged for a forgotten free trial again.*
+
+The first version will do exactly four things:
+
+- **Add a trial in under fifteen seconds.** Service name, end date, monthly cost. No account required for the first three trials.
+- **Email you two days before the charge.** Quietly, with the cancellation link for that specific service prefilled.
+- **Show you what you've saved.** A running tally of "trials cancelled in time." Mostly because I want to see my own.
+- **Generate a shareable image** when you avoid a charge — a small "saved $19 today, thanks to TrialGuard" card you can post if you want. Or not. No pressure.
+
+That's the entire MVP. No bank linking, ever. No "premium AI insights." No 14-step onboarding. The free tier covers what most people actually need; a small Pro tier for people who want unlimited trials and a calendar export will fund the lights.
+
+## Why this is being built in public
+
+OSChoices is a portfolio. The strategy is to build many small, focused tools and let the market pick the winners — which means most of what gets shipped here will quietly fail, and a few things will quietly work. TrialGuard is being announced before it's built so that the people who actually need it can shape what gets built. If you've ever lost money to a trial you forgot about, you are exactly the person I want to hear from.
+
+A few specific things I'm trying to figure out:
+
+- Email-only reminders, or SMS too? SMS is more reliable for time-sensitive nudges, but it adds friction and cost.
+- Should the cancellation guides for specific services (Netflix, Adobe, Figma, etc.) be community-edited like a wiki, or curated centrally?
+- How aggressive should the reminders be? One email two days out, or a sequence (one week, two days, one day)?
+
+If you have opinions, [reply to the newsletter](/) once you're subscribed, or just tell me on whatever platform you found this on. I read everything.
+
+## Coming soon
+
+TrialGuard launches in the next 2–3 weeks at **trialguard.oschoices.com**. If you want to be told when it's live — and to get the first batch of cancellation guides as a PDF — there's a newsletter signup on the [OSChoices homepage](/). One email per launch, no spam, easy to leave.
+
+The next time a free trial is about to charge you, I'd rather you knew about it.
+
+— Muhammad
